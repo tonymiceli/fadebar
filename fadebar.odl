@@ -1,0 +1,66 @@
+// fadebar.odl : type library source for OLE Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (fadebar.tlb) that will become a resource in
+// fadebar.ocx.
+
+#include <olectl.h>
+
+[ uuid(8019B260-2FFF-11D0-B850-000000000000), version(1.0),
+  helpstring("Fadebar Control"), control ]
+library FADEBARLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CFadebarCtrl
+
+	[ uuid(8019B261-2FFF-11D0-B850-000000000000),
+	  helpstring("Dispatch interface for Fadebar Control"), hidden ]
+	dispinterface _DFadebar
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CFadebarCtrl)
+			[id(DISPID_ENABLED), bindable, requestedit] boolean Enabled;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CFadebarCtrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CFadebarCtrl
+
+	[ uuid(8019B262-2FFF-11D0-B850-000000000000),
+	  helpstring("Event interface for Fadebar Control") ]
+	dispinterface _DFadebarEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CFadebarCtrl)
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CFadebarCtrl
+
+	[ uuid(8019B263-2FFF-11D0-B850-000000000000), licensed,
+	  helpstring("Fadebar Control"), control ]
+	coclass Fadebar
+	{
+		[default] dispinterface _DFadebar;
+		[default, source] dispinterface _DFadebarEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+};

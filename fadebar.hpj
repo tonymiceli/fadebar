@@ -1,0 +1,18 @@
+[OPTIONS]
+CONTENTS=main_index
+TITLE=FADEBAR Control Help
+COMPRESS=true
+WARNING=2
+
+[FILES]
+hlp\fadebar.rtf
+
+[BITMAPS]
+; miscellaneous
+hlp\Bullet.bmp
+
+[ALIAS]
+HIDD_ABOUTBOX_FADEBAR = HID_APP_ABOUT_FADEBAR
+
+[MAP]
+#include <hlp\fadebar.hm>
